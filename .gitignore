@@ -1,0 +1,29 @@
+# Directory-based project format:
+.idea/
+classes/
+
+# File-based project format:
+*.iml
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+#Maven
+
+lib/
+target/
+
+# Client
+
+npm-debug.log
+node
+etc
+node_modules
+typings
+
+*.js
+*.js.map
+!clean-blog.min.js
