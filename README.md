@@ -32,4 +32,4 @@ ___
 
 ##### Mems:
 
-![alt tag](https://cloud.githubusercontent.com/assets/9396988/16380937/891aec50-3c82-11e6-94e4-7fe8060d11c8.png)
+
