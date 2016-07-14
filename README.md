@@ -1,4 +1,4 @@
-### JSF variant of [blog app](https://github.com/solairerove/blog-app) with Liferay 6.1.2 GA3 integration
+### JSF variant of [blog app](https://github.com/solairerove/blog-app) with Liferay 7.0 GA2 integration
 
 
 ##### Build `*.war` file: 
