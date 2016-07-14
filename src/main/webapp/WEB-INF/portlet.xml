@@ -2,21 +2,22 @@
 
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
 	<portlet>
-		<portlet-name>jsf-blog-6.1</portlet-name>
-		<display-name>jsf-blog-6.1</display-name>
+		<portlet-name>jsf.blog.app</portlet-name>
+		<display-name>jsf.blog.app</display-name>
 		<portlet-class>javax.portlet.faces.GenericFacesPortlet</portlet-class>
 		<init-param>
 			<name>javax.portlet.faces.defaultViewId.view</name>
-			<value>/views/view.xhtml</value>
+			<value>/WEB-INF/views/view.xhtml</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
 			<mime-type>text/html</mime-type>
 		</supports>
+		<resource-bundle>content.Language</resource-bundle>
 		<portlet-info>
-			<title>jsf-blog-6.1</title>
-			<short-title>jsf-blog-6.1</short-title>
-			<keywords>jsf-blog-6.1</keywords>
+			<title>jsf.blog.app</title>
+			<short-title>jsf.blog.app</short-title>
+			<keywords>jsf.blog.app</keywords>
 		</portlet-info>
 		<security-role-ref>
 			<role-name>administrator</role-name>
