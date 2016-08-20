@@ -5,6 +5,8 @@
 
 * run the [Application.java](https://github.com/vlsidlyarevich/JSF-Blog/blob/master/src/main/java/com/github/vlsidlyarevich/spring/boot/jsf/blog/app/Application.java)
 * inspect the app by accessing the url: `localhost:8080/views/index.xhtml` in your favourite browser
+
+
 ___
 
 
