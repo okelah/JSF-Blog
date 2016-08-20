@@ -43,6 +43,10 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
@@ -79,6 +83,12 @@
             <groupId>org.glassfish.web</groupId>
             <artifactId>el-impl</artifactId>
             <version>2.2</version>
+        </dependency>
+
+        <!--H2 dependencies-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
         </dependency>
 
         <!-- Will be needed for the ConfigureListener -->
