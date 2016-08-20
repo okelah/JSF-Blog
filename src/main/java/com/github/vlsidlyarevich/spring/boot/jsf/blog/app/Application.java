@@ -1,4 +1,4 @@
-package com.github.vlsidlyarevich.spring.boot.jsf;
+package com.github.vlsidlyarevich.spring.boot.jsf.blog.app;
 
 
 import org.springframework.boot.SpringApplication;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 import javax.faces.webapp.FacesServlet;
 
 @SpringBootApplication
-@ComponentScan("com.github.vlsidlyarevich.spring.boot.jsf")
+@ComponentScan("com.github.vlsidlyarevich.spring.boot.jsf.blog.app")
 @EnableAutoConfiguration
 public class Application extends SpringBootServletInitializer {
 
