@@ -1,14 +1,13 @@
-### JSF variant of [blog app](https://github.com/solairerove/blog-app)
+### Spring boot based JSF variant of [blog app](https://github.com/solairerove/blog-app)
 
 
-##### Build `*.war` file: 
+#### Starting app
 
-* `git clone *git`
-* `cd project`
-* `mvn clean install`
+* run the [Application.java](https://github.com/vlsidlyarevich/JSF-Blog/blob/master/src/main/java/com/github/vlsidlyarevich/spring/boot/jsf/blog/app/Application.java)
+* inspect the app by accessing the url: `localhost:8080/views/index.xhtml` in your favourite browser
+
 
 ___
 
-##### Mems:
 
 
