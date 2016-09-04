@@ -3,11 +3,9 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <f:view>
-    <!-- Footer -->
     <footer>
         <h:panelGroup layout="block" styleClass="container">
             <h:panelGroup layout="block" styleClass="row">
@@ -15,26 +13,26 @@
                     <ul class="list-inline text-center">
                         <li>
                             <h:outputLink value="https://twitter.com/vlsidlyarevich">
-                                <span class="fa-stack fa-lg">
+                                <h:panelGroup styleClass="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
+                                </h:panelGroup>
                             </h:outputLink>
                         </li>
                         <li>
                             <h:outputLink value="https://github.com/vlsidlyarevich">
-                                <span class="fa-stack fa-lg">
+                                <h:panelGroup styleClass="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
+                                </h:panelGroup>
                             </h:outputLink>
                         </li>
                         <li>
                             <h:outputLink value="https://plus.google.com/u/0/104468017195583563642">
-                                <span class="fa-stack fa-lg">
+                                <h:panelGroup styleClass="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                                </span>
+                                </h:panelGroup>
                             </h:outputLink>
                         </li>
                     </ul>
