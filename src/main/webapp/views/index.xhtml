@@ -2,10 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -30,6 +28,43 @@
 <h:body>
     <ui:insert name="header">
         <ui:include src="../blocks/header.xhtml"/>
+    </ui:insert>
+
+    <header class="intro-header" style="background-image: url('../resources/images/home-bg.jpg')">
+        <h:panelGroup layout="block" styleClass="container">
+            <h:panelGroup layout="block" styleClass="row">
+                <h:panelGroup layout="block" styleClass="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h:panelGroup layout="block" styleClass="site-heading">
+                        <h1>Clean Blog</h1>
+                        <hr class="small"/>
+                        <span class="subheading">Anything more than you need</span>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
+        </h:panelGroup>
+    </header>
+
+    <h:panelGroup layout="block" styleClass="container">
+        <h:panelGroup layout="block" styleClass="row">
+            <h:panelGroup layout="block" styleClass="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>
+                    This is a Spring Boot based project which uses Java Server Faces for making user interface.
+                </p>
+
+                <p>
+                    You can visit my <h:outputLink value="https://github.com/vlsidlyarevich">
+                    <h:outputText value="github"/>
+                </h:outputLink> for JSF and Spring Boot base for your applications.
+                    Also you can visit my friend's <h:outputLink value="https://github.com/solairerove">
+                    <h:outputText value="github"/>
+                </h:outputLink> for useful scripts and other interesting things.
+                </p>
+            </h:panelGroup>
+        </h:panelGroup>
+    </h:panelGroup>
+
+    <ui:insert name="header">
+        <ui:include src="../blocks/footer.xhtml"/>
     </ui:insert>
 </h:body>
 </html>
