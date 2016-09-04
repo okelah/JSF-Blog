@@ -12,8 +12,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.authorizeRequests().antMatchers("/").permitAll().and()
-                .authorizeRequests().antMatchers("/console/**").permitAll();
+        httpSecurity.authorizeRequests()
+                .antMatchers("/console/**").permitAll()
+                .antMatchers("/**/index.xhtml").permitAll()
+                .antMatchers("/**/about.xhtml").permitAll()
+                .antMatchers("/**/posts.xhtml").authenticated()
+                .antMatchers("/**/newPost.xhtml").authenticated()
+                .antMatchers("/").permitAll();
 
         httpSecurity.csrf().disable();
         httpSecurity.headers().frameOptions().disable();
