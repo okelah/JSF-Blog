@@ -16,8 +16,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/console/**").permitAll()
                 .antMatchers("/**/index.xhtml").permitAll()
                 .antMatchers("/**/about.xhtml").permitAll()
+                .antMatchers("/**/login.xhtml").permitAll()
                 .antMatchers("/**/posts.xhtml").authenticated()
-                .antMatchers("/**/newPost.xhtml").authenticated()
+                .antMatchers("/**/new_post.xhtml").authenticated()
                 .antMatchers("/").permitAll();
 
         httpSecurity.csrf().disable();
