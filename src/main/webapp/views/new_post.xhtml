@@ -3,9 +3,135 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <h:outputStylesheet library="css" name="bootstrap-theme.min.css"/>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="css" name="clean-blog.min.css"/>
+    <h:outputScript library="js" name="jquery.min.js"/>
+    <h:outputScript library="js" name="bootstrap.min.js"/>
+    <h:outputScript library="js" name="clean-blog.min.js"/>
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+          rel="stylesheet" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'
+          rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'/>
+</h:head>
+
 <f:view>
-    <h:outputLabel value="Hello, world"/>
+    <ui:insert name="header">
+        <ui:include src="../blocks/header.xhtml"/>
+    </ui:insert>
+
+    <header class="intro-header" style="background-image: url('../resources/images/about-bg.jpg')">
+        <h:panelGroup layout="block" styleClass="container">
+            <h:panelGroup layout="block" styleClass="row">
+                <h:panelGroup layout="block" styleClass="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h:panelGroup layout="block" styleClass="site-heading">
+                        <h1>Clean Blog</h1>
+                        <hr class="small"/>
+                        <h:panelGroup styleClass="subheading">Anything more than you need</h:panelGroup>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
+        </h:panelGroup>
+    </header>
+
+    <div>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-3">
+                        <label style="font-size: xx-large">author:</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input placeholder="author" class="form-control input-lg"/>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <br/>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-3">
+                        <label style="font-size: xx-large">title:</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input placeholder="title" class="form-control input-lg"/>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <br/>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-3">
+                        <label style="font-size: xx-large">subtitle: </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input placeholder="subtitle" class="form-control input-lg"/>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <br/>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-3">
+                        <label style="font-size: xx-large">content:</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <textarea placeholder="content" class="form-control input-lg"></textarea>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <br/>
+        <!-- Pager -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="pager">
+                        <div class="col-lg-2 col-lg-offset-7 col-md-2 col-md-offset-8">
+                            <li class="next">
+                                <a style="cursor: hand;margin-right: 22%">Save&rarr;</a>
+                            </li>
+                        </div>
+
+                        <div class="col-lg-2 col-md-2">
+                            <li class="next">
+                                <a style="cursor: hand;margin-right: 22%">Posts&rarr;</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20%">
+        <div class="col-lg-8 col-lg-offset-3 col-md-10 col-md-offset-1">
+            <div class="col-lg-4 col-lg-offset-2">
+                <h1 style="margin-top: 10%">Post added!</h1>
+            </div>
+            <div class="col-lg-2">
+                <ul class="pager">
+                    <li class="next">
+                        <a style="cursor: hand;margin-right: 22%">Posts&rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </f:view>
 </html>
