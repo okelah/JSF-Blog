@@ -3,7 +3,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -43,95 +44,97 @@
         </h:panelGroup>
     </header>
 
-    <div>
+    <h:panelGroup layout="block">
         <article>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 col-lg-offset-3">
-                        <label style="font-size: xx-large">author:</label>
-                    </div>
-                    <div class="col-lg-4">
-                        <input placeholder="author" class="form-control input-lg"/>
-                    </div>
-                </div>
-            </div>
+            <h:panelGroup layout="block" styleClass="container">
+                <h:panelGroup layout="block" styleClass="row">
+                    <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-3">
+                        <h:outputLabel style="font-size: xx-large" value="author: "/>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" styleClass="col-lg-4">
+                        <h:inputText placeholder="author" styleClass="form-control input-lg"/>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
         </article>
         <br/>
         <article>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 col-lg-offset-3">
-                        <label style="font-size: xx-large">title:</label>
-                    </div>
-                    <div class="col-lg-4">
-                        <input placeholder="title" class="form-control input-lg"/>
-                    </div>
-                </div>
-            </div>
+            <h:panelGroup layout="block" styleClass="container">
+                <h:panelGroup layout="block" styleClass="row">
+                    <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-3">
+                        <h:outputLabel style="font-size: xx-large" value="title: "/>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" styleClass="col-lg-4">
+                        <h:inputText placeholder="title" styleClass="form-control input-lg"/>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
         </article>
         <br/>
         <article>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 col-lg-offset-3">
-                        <label style="font-size: xx-large">subtitle: </label>
-                    </div>
-                    <div class="col-lg-4">
-                        <input placeholder="subtitle" class="form-control input-lg"/>
-                    </div>
-                </div>
-            </div>
+            <h:panelGroup layout="block" styleClass="container">
+                <h:panelGroup layout="block" styleClass="row">
+                    <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-3">
+                        <h:outputLabel style="font-size: xx-large" value="subtitle: "/>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" styleClass="col-lg-4">
+                        <h:inputText placeholder="subtitle" styleClass="form-control input-lg"/>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
         </article>
         <br/>
         <article>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 col-lg-offset-3">
-                        <label style="font-size: xx-large">content:</label>
-                    </div>
-                    <div class="col-lg-4">
-                        <textarea placeholder="content" class="form-control input-lg"></textarea>
-                    </div>
-                </div>
-            </div>
+            <h:panelGroup layout="block" styleClass="container">
+                <h:panelGroup layout="block" styleClass="row">
+                    <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-3">
+                        <h:outputLabel style="font-size: xx-large" value="content: "/>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" styleClass="col-lg-4">
+                        <h:inputTextarea placeholder="content" styleClass="form-control input-lg"/>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
         </article>
-
         <br/>
-        <!-- Pager -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h:panelGroup layout="block" styleClass="container">
+            <h:panelGroup layout="block" styleClass="row">
+                <h:panelGroup layout="block" styleClass="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="pager">
-                        <div class="col-lg-2 col-lg-offset-7 col-md-2 col-md-offset-8">
+                        <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-7 col-md-2 col-md-offset-8">
                             <li class="next">
                                 <a style="cursor: hand;margin-right: 22%">Save&rarr;</a>
                             </li>
-                        </div>
+                        </h:panelGroup>
 
-                        <div class="col-lg-2 col-md-2">
+                        <h:panelGroup layout="block" styleClass="col-lg-2 col-md-2">
                             <li class="next">
                                 <a style="cursor: hand;margin-right: 22%">Posts&rarr;</a>
                             </li>
-                        </div>
+                        </h:panelGroup>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+                </h:panelGroup>
+            </h:panelGroup>
+        </h:panelGroup>
+    </h:panelGroup>
 
-    <div style="margin-bottom: 20%">
-        <div class="col-lg-8 col-lg-offset-3 col-md-10 col-md-offset-1">
-            <div class="col-lg-4 col-lg-offset-2">
-                <h1 style="margin-top: 10%">Post added!</h1>
-            </div>
-            <div class="col-lg-2">
-                <ul class="pager">
-                    <li class="next">
-                        <a style="cursor: hand;margin-right: 22%">Posts&rarr;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <!--<h:panelGroup layout="block" styleClass="margin-bottom: 20%">-->
+    <!--<h:panelGroup layout="block" styleClass="col-lg-8 col-lg-offset-3 col-md-10 col-md-offset-1">-->
+    <!--<h:panelGroup layout="block" styleClass="col-lg-4 col-lg-offset-2">-->
+    <!--<h1 style="margin-top: 10%">Post added!</h1>-->
+    <!--</h:panelGroup>-->
+    <!--<h:panelGroup layout="block" styleClass="col-lg-2">-->
+    <!--<ul class="pager">-->
+    <!--<li class="next">-->
+    <!--<a style="cursor: hand;margin-right: 22%">Posts&rarr;</a>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</h:panelGroup>-->
+    <!--</h:panelGroup>-->
+    <!--</h:panelGroup>-->
+
+    <ui:insert name="footer">
+        <ui:include src="../blocks/footer.xhtml"/>
+    </ui:insert>
 </f:view>
 </html>
