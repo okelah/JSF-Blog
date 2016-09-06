@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:th="http://www.thymeleaf.org">
 
 <h:head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -44,68 +45,54 @@
         </h:panelGroup>
     </header>
 
-    <h:panelGroup layout="block">
-        <article>
-            <h:panelGroup layout="block" styleClass="container">
-                <h:panelGroup layout="block" styleClass="row">
-                    <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-3">
-                        <h:outputLabel style="font-size: xx-large" value="login: "/>
-                    </h:panelGroup>
-                    <h:panelGroup layout="block" styleClass="col-lg-4">
-                        <h:inputText placeholder="login" styleClass="form-control input-lg"/>
-                    </h:panelGroup>
-                </h:panelGroup>
-            </h:panelGroup>
-        </article>
-        <br/>
-        <article>
-            <h:panelGroup layout="block" styleClass="container">
-                <h:panelGroup layout="block" styleClass="row">
-                    <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-3">
-                        <h:outputLabel style="font-size: xx-large" value="password: "/>
-                    </h:panelGroup>
-                    <h:panelGroup layout="block" styleClass="col-lg-4">
-                        <h:inputTextarea placeholder="password" styleClass="form-control input-lg"/>
+    <h:form action="@{/login}" method="post">
+        <h:panelGroup layout="block">
+            <article>
+                <h:panelGroup layout="block" styleClass="container">
+                    <h:panelGroup layout="block" styleClass="row">
+                        <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-3">
+                            <h:outputLabel style="font-size: xx-large" value="login: "/>
+                        </h:panelGroup>
+                        <h:panelGroup layout="block" styleClass="col-lg-4">
+                            <input type="text" placeholder="login" name="username"
+                                   class="form-control input-lg"/>
+                        </h:panelGroup>
                     </h:panelGroup>
                 </h:panelGroup>
-            </h:panelGroup>
-        </article>
-
-        <br/>
-        <!-- Pager -->
-        <h:panelGroup layout="block" styleClass="container">
-            <h:panelGroup layout="block" styleClass="row">
-                <ul class="pager">
-                    <h:panelGroup layout="block" styleClass="col-lg-3 col-lg-offset-3 col-md-2 col-md-offset-8">
-                        <li class="next">
-                            <a style="cursor: hand;margin-right: 22%">Log in&rarr;</a>
-                        </li>
+            </article>
+            <br/>
+            <article>
+                <h:panelGroup layout="block" styleClass="container">
+                    <h:panelGroup layout="block" styleClass="row">
+                        <h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-3">
+                            <h:outputLabel style="font-size: xx-large" value="password: "/>
+                        </h:panelGroup>
+                        <h:panelGroup layout="block" styleClass="col-lg-4">
+                            <input type="password" name="password" placeholder="password"
+                                   class="form-control input-lg"/>
+                        </h:panelGroup>
                     </h:panelGroup>
-                    <h:panelGroup layout="block" styleClass="col-lg-2 col-md-2">
-                        <li class="next">
-                            <a style="cursor: hand;margin-right: 22%">Home&rarr;</a>
-                        </li>
-                    </h:panelGroup>
-                </ul>
+                </h:panelGroup>
+            </article>
+            <br/>
+            <h:panelGroup layout="block" styleClass="container">
+                <h:panelGroup layout="block" styleClass="row">
+                    <ul class="pager">
+                        <h:panelGroup layout="block" styleClass="col-lg-3 col-lg-offset-3 col-md-2 col-md-offset-8">
+                            <li class="next">
+                                <h:commandLink type="submit" value="Log In&rarr;" style="cursor: hand;margin-right: 22%"/>
+                            </li>
+                        </h:panelGroup>
+                        <h:panelGroup layout="block" styleClass="col-lg-2 col-md-2">
+                            <li class="next">
+                                <h:link value="Home&rarr;" outcome="index" style="cursor: hand;margin-right: 22%"/>
+                            </li>
+                        </h:panelGroup>
+                    </ul>
+                </h:panelGroup>
             </h:panelGroup>
         </h:panelGroup>
-    </h:panelGroup>
-
-    <!--<h:panelGroup layout="block" styleClass="container">-->
-    <!--<h:panelGroup layout="block" styleClass="col-lg-8 col-lg-offset-3 col-md-10 col-md-offset-1">-->
-    <!--<h:panelGroup layout="block" styleClass="col-lg-8 col-lg-offset-1">-->
-    <!--<h1 style="margin-top: 10%">Authorization successful!</h1>-->
-    <!--</h:panelGroup>-->
-    <!--<br/>-->
-    <!--<h:panelGroup layout="block" styleClass="col-lg-2 col-lg-offset-4">-->
-    <!--<ul class="pager">-->
-    <!--<li class="next">-->
-    <!--<a style="cursor: hand;margin-right: 22%">Posts&rarr;</a>-->
-    <!--</li>-->
-    <!--</ul>-->
-    <!--</h:panelGroup>-->
-    <!--</h:panelGroup>-->
-    <!--</h:panelGroup>-->
+    </h:form>
 
     <ui:insert name="footer">
         <ui:include src="../blocks/footer.xhtml"/>
