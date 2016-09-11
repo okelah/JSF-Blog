@@ -1,5 +1,7 @@
 package com.github.vlsidlyarevich.spring.boot.jsf.blog.app.model;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -33,8 +35,8 @@ public class User implements Serializable {
     @Column(name = "login", length = 32)
     private String login;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "password_hash")
+    private String password_hash;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "user_authority",
@@ -50,7 +52,7 @@ public class User implements Serializable {
         this.nickname = nickname;
         this.email = email;
         this.login = login;
-        this.password = password;
+        this.password_hash = (new BCryptPasswordEncoder()).encode(password);
         this.authorities = authorities;
     }
 
@@ -86,12 +88,12 @@ public class User implements Serializable {
         this.login = login;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordHash() {
+        return password_hash;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswordHash(String passwordHash) {
+        this.password_hash = passwordHash;
     }
 
     public List<Authority> getAuthorities() {
@@ -111,13 +113,13 @@ public class User implements Serializable {
                 Objects.equals(nickname, user.nickname) &&
                 Objects.equals(email, user.email) &&
                 Objects.equals(login, user.login) &&
-                Objects.equals(password, user.password) &&
+                Objects.equals(password_hash, user.password_hash) &&
                 Objects.equals(authorities, user.authorities);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nickname, email, login, password, authorities);
+        return Objects.hash(id, nickname, email, login, password_hash, authorities);
     }
 
     @Override
@@ -127,7 +129,7 @@ public class User implements Serializable {
                 ", nickname='" + nickname + '\'' +
                 ", email='" + email + '\'' +
                 ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
+                ", passwordHash='" + password_hash + '\'' +
                 ", authorities=" + authorities +
                 '}';
     }
