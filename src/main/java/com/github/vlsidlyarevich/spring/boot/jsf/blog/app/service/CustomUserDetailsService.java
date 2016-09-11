@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
  * Created by vlad on 06.09.16.
  */
 @Component
+@Transactional
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
@@ -29,6 +31,6 @@ public class CustomUserDetailsService implements UserDetailsService {
                 new SimpleGrantedAuthority(authority.getName())).collect(Collectors.toCollection(ArrayList::new));
 
         return new User(user.getLogin(),
-                user.getPassword(), grantedAuthorities);
+                user.getPasswordHash(), grantedAuthorities);
     }
 }
