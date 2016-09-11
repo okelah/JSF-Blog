@@ -186,22 +186,22 @@ VALUES (
   2
 );
 
-INSERT INTO `user` (`id`, `nickname`, `email`, `login`, `password`)
+INSERT INTO `user` (`id`, `nickname`, `email`, `login`, `password_hash`)
 VALUES (
   1,
   'Admin',
   'admin@gmail.com',
   'admin',
-  'pass'
+  '$2a$06$7rbrpk4cR9EYFPFBdbqAFu9AUugAutrrYV1WAKAotSUe6YMeK.9XS'
 );
 
-INSERT INTO `user` (`id`, `nickname`, `email`, `login`, `password`)
+INSERT INTO `user` (`id`, `nickname`, `email`, `login`, `password_hash`)
 VALUES (
   2,
   'User',
   'user@gmail.com',
   'user',
-  'pass'
+  '$2a$06$iJjdV2rWz9i8mzdqFyh5zOKgrG4VsDdA5ZAErdHwQUT6m9OVLadGG'
 );
 
 INSERT INTO `authority` (`id`, `name`) VALUES (1, 'ROLE_USER');

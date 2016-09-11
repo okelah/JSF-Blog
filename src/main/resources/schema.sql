@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS user (
   nickname VARCHAR(255) UNIQUE,
   email    VARCHAR(255) UNIQUE,
   login    VARCHAR(255) UNIQUE,
-  password VARCHAR(255),
+  password_hash VARCHAR(255),
 );
 
 CREATE TABLE IF NOT EXISTS authority (
