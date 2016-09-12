@@ -111,15 +111,15 @@
                     <ul class="pager">
                         <h:panelGroup layout="block" styleClass="col-lg-3 col-lg-offset-3 col-md-2 col-md-offset-8">
                             <li class="next">
-                                <h:commandButton value="Sign Up&rarr;" style="cursor: hand;margin-right: 22%"
-                                                 action="#{registrationBean.saveUser()}">
+                                <h:commandLink value="Sign Up" style="cursor: hand;margin-right: 22%"
+                                               action="#{registrationBean.saveUser()}">
                                     <f:ajax execute="@form"/>
-                                </h:commandButton>
+                                </h:commandLink>
                             </li>
                         </h:panelGroup>
                         <h:panelGroup layout="block" styleClass="col-lg-2 col-md-2">
                             <li class="next">
-                                <h:link value="Home&rarr;" outcome="index" style="cursor: hand;margin-right: 22%"/>
+                                <h:link value="Home" outcome="index" style="cursor: hand;margin-right: 22%"/>
                             </li>
                         </h:panelGroup>
                     </ul>
