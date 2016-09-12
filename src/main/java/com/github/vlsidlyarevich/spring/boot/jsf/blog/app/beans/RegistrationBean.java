@@ -5,10 +5,9 @@ import com.github.vlsidlyarevich.spring.boot.jsf.blog.app.model.Authority;
 import com.github.vlsidlyarevich.spring.boot.jsf.blog.app.model.User;
 import com.github.vlsidlyarevich.spring.boot.jsf.blog.app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,14 +15,14 @@ import java.util.List;
 /**
  * Created by vlad on 11.09.16.
  */
-@ManagedBean
-@RequestScoped
+@Component
+@Scope("request")
 public class RegistrationBean implements Serializable {
 
     @Autowired
     private UserService userService;
 
-    @ManagedProperty(value = "#{userModelBean}")
+    @Autowired
     private UserModelBean userModel;
 
     public RegistrationBean() {
@@ -48,5 +47,13 @@ public class RegistrationBean implements Serializable {
 
     public void setUserModel(UserModelBean userModel) {
         this.userModel = userModel;
+    }
+
+    @Override
+    public String toString() {
+        return "RegistrationBean{" +
+                "userService=" + userService +
+                ", userModel=" + userModel +
+                '}';
     }
 }

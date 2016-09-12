@@ -1,14 +1,16 @@
 package com.github.vlsidlyarevich.spring.boot.jsf.blog.app.beans.models;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 import java.io.Serializable;
 
 /**
  * Created by vlad on 11.09.16.
  */
-@ManagedBean
-@SessionScoped
+@Component
+@Scope("request")
 public class UserModelBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -21,7 +23,16 @@ public class UserModelBean implements Serializable {
 
     private String password;
 
+    @PostConstruct
+    public void init() {
+        nickname = "";
+        email = "";
+        login = "";
+        password = "";
+    }
+
     public UserModelBean() {
+
     }
 
     public UserModelBean(String nickname, String email, String login, String password) {
